@@ -38,7 +38,6 @@ const Chat = () => {
 
     const sendMessage = (e) => {
         e.preventDefault();
-        alert("send message")
         db.collection('rooms').doc(roomId).collection('messages').add({
             name: user.displayName,
             message: input,
